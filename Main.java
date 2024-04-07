@@ -1,7 +1,15 @@
 public class Main {
     public static void main(String[] args) {
-        Point point = new Point(10.1, 5.7);
+        // Tworzenie obiektu klasy Point
+        Point center = new Point(5, 6);
+        
+        // Tworzenie obiektu klasy Circle i inicjowanie go wartościami
+        Circle circle = new Circle(center, 9);
 
-        System.out.println("Współrzędne punktu: (" + point.getX() + ", " + point.getY() + ")");
+        // Wyświetlanie właściwości koła
+        System.out.println("Punkty: (" + circle.getCenter().getX() + ", " + circle.getCenter().getY() + ")");
+        System.out.println("Promien: " + circle.getRadius());
+        System.out.println("Obwod kola: " + circle.calculatePerimeter());
+        System.out.println("Pole powierzchni kola: " + circle.getArea());
     }
 }
